@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        img{
+          width: 100%;
+          border-radius: 13px;
+          height: 235px;
+          object-fit: cover;
+          padding-bottom: 1%;
+        }  
+        body{
+            background-color: #9cff9c;
+            font-family: Verdana, Tahoma, sans-serif;
+            margin: 5%;
+
+        }
+        #container{
+            max-width: 300px;
+            margin: 0 auto;
+
+            margin-top: 20vh; 
+        }
+        .card{
+            background-color: #ffffff;
+            padding: 8px;
+            border-radius: 12px;
+            border: 1px solid #9cff9c;
+        }
+        .tag{
+            padding: 4px 4px 4px 4px;
+            border:1px solid #a29e9e;
+            color: #9cff9c;
+            background-color: #a29e9e;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .name{
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+        p{
+            font: size 14px;
+            color: #a29e9e;
+            line-height: 150%;
+        }
+        button{
+            border:none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            color: #9cff9c;
+            background-color: #a29e9e;
+            margin:0 auto;
+            display: block;
+            transition: all 400ms ease-in-out;
+        }
+        button:focus,button:hover{
+            color: #a2939e;
+            background-color: #9cff9c;
+            cursor: pointer;
+
+        }
+        .card__details{
+            padding: 10px 8px 8px 8px;
+        }
+      </style>
+</head>
+
+
+<body>
+
+    <div id="container">
+        <div class="card">
+            <img alt="person" src="https://source.unsplash.com/random/?person">    
+            
+            <div class="card__details">
+
+            <span class="tag">Persons</span>
+
+            <span class="tag">Lorem</span>
+        
+            <div class="name">Lipsum dolor.</div>
+           
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vitae doloribus accusantium, dolores, veritatis sint tempore dolor sequi, totam ad non adipisci animi ab similique.</p>           
+         <button>Read more</button>
+        </div>
+
+        </div>
+    </div>
+ 
+
+
+</body>
+
+</html>
