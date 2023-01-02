@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-12.4</title>
+</head>
+<style>
+    html,body {
+        margin: 0%;
+        padding: 0%;
+    }
+    .box{
+        position: relative;
+        height: 50vh;
+        width: 50vw;
+    }
+    h1{
+        margin: 15%;
+        padding: 14%;
+        font-size:1.8rem ;
+        font-weight: 300;
+        text-align: center;
+        border: 7px solid black;
+    }
+    .ellipse{
+        clip-path: ellipse(closest-side farthest-side);
+    }
+
+</style>
+
+<body>
+  <div class="box">
+   <div class="ellipse">
+    <h1>Cool Border</h1>
+  </div>
+</div>
+</body>
+</html>
