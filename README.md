@@ -1,2 +1,2 @@
-# CSS Media Queries
+# CSS EX
  
