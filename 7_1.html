@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 7-1 Button</title>
+    <style>
+       
+        html body {
+        font-family: sans-serif;
+        font-size: 16px;
+        height: 50vh;
+        width: 50vw;
+        }
+
+        button{
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            
+        }
+      
+        #flat {
+            background-color: #167eb9;
+            border-style: none;
+        
+        }
+
+        #flat:hover {
+            background-color: #006097;
+        }
+        #round {
+            background-color: #3a9b3a;
+            border-radius: 10px;
+            border-style: none;
+
+        }
+        #round:hover {
+            background-color: #006900;
+        }
+        #flat_ghost {
+            border-style: solid;
+            border-width: 3px;
+            border-color: palevioletred;
+        }
+        #flat_ghost:hover {
+            background-color:firebrick;
+        }
+        #round_ghost {
+            border-style: solid;
+            border-width: 3px;
+            border-color: yellow;
+            border-radius: 10px;
+        }
+        #round_ghost:hover {
+            background-color: yellow;;
+        }
+    </style>
+   </head>
+
+  <body>
+    <button id="flat" class="btn">Register</button>
+    <button id="round">Register</button>
+    <button id="flat_ghost">Register</button>
+    <button id="round_ghost">Register</button>
+
+
+  </body>
+
+ </html>
