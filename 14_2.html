@@ -1,56 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex 14-2</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>buttons :before transition </title>
+    <style>
 
-</head>
-<style>
-    html  body{
+    html body{
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: space-around;
+            flex-wrap: wrap;
             height: 100vh;
-    }
-    button{
-        width:25vw;
-        height: 10vh;
+            text-align: center;
+
 
     }
-    .btn1{
-     
 
-    }
-    
-    .btn2{
-     
-    }
-    
-   .btn3{
-     
-    }
-    .btn4{
+      .box {
+        width: 100px;
+        height: 50px;
+        border: 2px black solid;
+        margin: 50px 30px;
+        text-align: center;
+        overflow:hidden;
+      }
 
-       
+      .box-1 {
+        transition: all 1s;
+        position: relative;
+      }
 
-    }
-    .btn5{
-      
+      .box-1::before {
+        content: "Cool!";
+        width: 100px;
+        height: 50px;
+        background-color: yellow;
+        position: absolute;
+        top: -2;
+        left: 0;
+        transform: translateY(-52px);
+        transition: all 1s;
+        z-index: 2;
+      }
 
-    }
-</style>
 
-<body>
+      .box-1:hover::before {
+        transform: TranslateY(0);
+      }
 
-    <button class="btn1">Translate Y</button>
-    <button class="btn2">Translate X</button>
-    <button class="btn3">Rotate</button>
-    <button class="btn4">Scale</button>
-    <button class="btn5">Skew</button>
+      .box-2 {
+        transition: all 1s;
+        position: relative;
+      }
+
+      .box-2::before {
+        content: "";
+        width: 100px;
+        height: 50px;
+        background-color: blue;
+        position: absolute;
+        top: -2;
+        left: 0;
+        transform: translate(102px);
+        transition: all 1s;
+        z-index: -1;
+      }
+
+      .box-2:hover::before {
+        transform: TranslateX(0);
+      }
+
+      .box-3 {
+        position: relative;
+        transition: all 1s;
+      }
+
+      .box-3::before {
+        content: "";
+        width: 50px;
+        height: 100px;
+        background-color: green;
+        position: absolute;
+        top: -2;
+        left: 0;
+        transform: translate(-52px);
+        transition: all 1s;
+        z-index: -1;
+      }
+
+      .box-3:hover::before {
+        transform-origin: top right;
+        transform:rotate(-90deg) translateY(-50px);
         
+        
+      }
 
-</body>
+      .box-4 {
+        transition: all 1s;
+        position: relative;
+        background-color: white;
+      }
+
+      .box-4::before {
+        content:"Scale";
+        color:white;
+        width: 100px;
+        height: 50px;
+        background-color:black;
+        font-size: 3rem;
+        text-align: center;
+        position: absolute;
+        top: -2;
+        left: 0;
+        transition: all .5s;
+        opacity:0;
+
+      }
+
+      .box-4:hover::before {
+        font-size:1rem;
+        opacity:1;
+      }
+
+      .box-5 {
+        transition: all .5s;
+        position: relative;
+      }
+
+      .box-5::before {
+        content: "";
+        transition: all 1s;
+        width: 5px;
+        height: 5px;
+        background-color: pink;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        opacity:0;
+        z-index:-1;
+      }
+
+      .box-5:hover {
+        transform:skew(-20deg);
+      }
+
+      .box-5:hover::before {
+        opacity:1;
+        width:100px;
+        height:50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin:center;
+        transform: rotateY(-180deg) ;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box-1">TranslateY</div>
+    <div class="box box-2">TranslateX</div>
+    <div class="box box-3">Rotate</div>
+    <div class="box box-4">Scale</div>
+    <div class="box box-5">Skew</div>
+  </body>
 </html>
