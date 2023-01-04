@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-15.1 grid</title>
+  </head>
+  <style>
+    .container {
+      max-width: 960px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      column-gap: 1rem;
+      row-gap: 1rem;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .container > div {
+      border-radius: 20px;
+    }
+
+    .div1 {
+      background-color: #e23d3d;
+      grid-column: 1 / span 2;
+    }
+
+    .div2 {
+      background-color: #5252e9;
+      grid-column: 3 / span 2;
+    }
+
+    .div3 {
+      background-color: #40e440;
+    }
+
+    .div4 {
+      background-color: #f04df0;
+      grid-column: 2 / span 3;
+
+      height: 150px;
+    }
+
+    .div5 {
+      background-color: #787836;
+      grid-column: 1 /-1;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="div1"></div>
+      <div class="div2"></div>
+      <div class="div3"></div>
+      <div class="div4"></div>
+      <div class="div5"></div>
+    </div>
+  </body>
+</html>
