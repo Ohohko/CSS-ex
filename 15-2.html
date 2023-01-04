@@ -9,15 +9,15 @@
   <style>
     .container {
       max-width: 960px;
-      height: 150px;
-
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
       column-gap: 5px;
       row-gap: 5px;
-      justify-content: center;
       align-content: center;
+      height: 150px;
+
+      
     }
 
     .container > div {
@@ -33,8 +33,9 @@
 
     .div2 {
       background-color: #5252e9;
-      grid-column: 1 / span 2;
-      grid-row: 2 / span 4;
+      grid-area: 2 /1 / span 2 / span 2;
+      grid-row: 2/2/2/2;
+
     }
 
     .div3 {
@@ -50,6 +51,8 @@
 
     .div5 {
       background-color: #787836;
+      grid-column: -3 / span -1;
+
     }
   </style>
   <body>
